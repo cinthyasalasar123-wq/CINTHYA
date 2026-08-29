@@ -467,6 +467,42 @@ section h2::before {
 }
 
 /* ====== PUENTE DIGITAL: TIPO DE CAMBIO ====== */
+.puente-digital-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+.pd-subtitle {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+.pd-btn {
+  background: linear-gradient(135deg, #ff3366 0%, #c41e3a 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 51, 102, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+.pd-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 51, 102, 0.5);
+}
+.pd-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
 .pd-estado {
   text-align: center;
   font-size: 0.9rem;
