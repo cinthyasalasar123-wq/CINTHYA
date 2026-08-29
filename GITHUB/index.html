@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Encanto Pastelería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR PARA EL EFECTO DE MARIPOSAS CAYENDO -->
+  <div class="efecto-caida-container" id="efectoCaida"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <h1>🧁 Dulce Encanto Pastelería 🦋</h1>
+      <p>El Triunfo Zn "C" Mz "N" Lote-13 | 📧 dulceencanto@gmail.com | 📞 968135439</p>
+    </div>
+  </header>
+  
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#tortas">TORTAS</a>
+    <a href="#cupcakes">CUPCAKES</a>
+    <a href="#postres">POSTRES</a>
+    <a href="#panaderia">PANADERÍA</a>
+    <a href="#combos">COMBOS</a>
+  </nav>
+  
+  <!-- BOTÓN FLOTANTE PARA IR AL INICIO -->
+  <button class="btn-inicio-flotante" id="btnInicio" onclick="irAlInicio()"></button>
+
+  <!-- SECCIÓN INICIO / HERO CAROUSEL -->
+  <section id="inicio">
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1920&q=80" alt="Torta de chocolate">
+          <div class="carousel-overlay">
+            <h2>Endulzamos tus Momentos Especiales</h2>
+            <p>Tortas, cupcakes y postres artesanales hechos con amor, ingredientes frescos y mucho sabor.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=1920&q=80" alt="Cupcakes decorados">
+          <div class="carousel-overlay">
+            <h2>El Dulce Detalle que Enamora</h2>
+            <p>Descubre nuestra variedad de tortas, cupcakes, postres y combos perfectos para cada ocasión.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="previousSlide()">‹</button>
+        <button class="carousel-btn" onclick="nextSlide()">›</button>
+      </div>
+
+      <div class="carousel-indicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR DE PRODUCTOS -->
+  <div class="productos">
+
+    <!-- SECCIÓN 1: TORTAS -->
+    <section id="tortas">
+      <h2>Tortas</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Torta de Chocolate"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Torta de Chocolate Belga</h3>
+              <p>Bizcocho húmedo de chocolate con relleno cremoso y ganache brillante.</p>
+              <div class="precio">S/ 65.00 <span>tamaño mediano (12 porciones)</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Torta de Chocolate Belga', 'S/ 65.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfd1Xi1N1vlfv7km2iJvxo5A5EBUoaSY_nxRCH1s8UQ&s=10" alt="Torta Red Velvet"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Torta Red Velvet</h3>
+              <p>Suave bizcocho aterciopelado con frosting de queso crema, clásico e irresistible.</p>
+              <div class="precio">S/ 70.00 <span>tamaño mediano (12 porciones)</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Torta Red Velvet', 'S/ 70.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=800&q=80" alt="Torta de Fresa"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Torta de Fresa con Crema Chantilly</h3>
+              <p>Bizcocho esponjoso relleno de fresas naturales y crema chantilly suave.</p>
+              <div class="precio">S/ 60.00 <span>tamaño mediano (12 porciones)</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Torta de Fresa con Crema Chantilly', 'S/ 60.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80" alt="Torta Tres Leches"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Torta Tres Leches</h3>
+              <p>El clásico postre bien empapado, decorado con crema batida y canela.</p>
+              <div class="precio">S/ 55.00 <span>tamaño mediano (12 porciones)</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Torta Tres Leches', 'S/ 55.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: CUPCAKES -->
+    <section id="cupcakes">
+      <h2>Cupcakes</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80" alt="Cupcake de Vainilla"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Cupcake de Vainilla</h3>
+              <p>Suave bizcocho de vainilla con frosting de mantequilla y chispas de colores.</p>
+              <div class="precio">S/ 6.00 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Cupcake de Vainilla', 'S/ 6.00 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=800&q=80" alt="Cupcake de Chocolate"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Cupcake de Chocolate</h3>
+              <p>Bizcocho de chocolate intenso con frosting de chocolate y virutas.</p>
+              <div class="precio">S/ 6.50 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Cupcake de Chocolate', 'S/ 6.50 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=800&q=80" alt="Cupcake Red Velvet"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Cupcake Red Velvet</h3>
+              <p>Delicado bizcocho aterciopelado con frosting de queso crema.</p>
+              <div class="precio">S/ 7.00 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Cupcake Red Velvet', 'S/ 7.00 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDTMPAJ8plYwGHJF6V5ek08kREhJ2iH4DpgC34VLhnsw&s=10" alt="Cupcake de Oreo"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Cupcake de Oreo</h3>
+              <p>Bizcocho de vainilla con trozos de galleta Oreo y frosting cremoso.</p>
+              <div class="precio">S/ 7.00 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Cupcake de Oreo', 'S/ 7.00 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: POSTRES -->
+    <section id="postres">
+      <h2>Postres</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSP7GSgm8H9uroC8ha2nRNg7S8Tdz0OhPOUwOjWXYlzA&s=10" alt="Cheesecake de Fresa"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Cheesecake de Fresa</h3>
+              <p>Base de galleta con relleno cremoso de queso y cobertura de fresas naturales.</p>
+              <div class="precio">S/ 15.00 <span>por porción</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Cheesecake de Fresa', 'S/ 15.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" alt="Tiramisú"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Tiramisú Clásico</h3>
+              <p>El tradicional postre italiano con capas de café, mascarpone y cacao.</p>
+              <div class="precio">S/ 16.00 <span>por porción</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Tiramisú Clásico', 'S/ 16.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Brownie con Helado"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Brownie con Helado</h3>
+              <p>Brownie tibio de chocolate con bola de helado de vainilla y salsa de fudge.</p>
+              <div class="precio">S/ 14.00 <span>por porción</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Brownie con Helado', 'S/ 14.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpZfdy0xnqgpfPoNKPGYJTQ3Z1TsZVI_M6YcLZ-ausGA&s=10" alt="Mousse de Chocolate"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Mousse de Chocolate</h3>
+              <p>Textura ligera y sedosa de chocolate oscuro, decorada con virutas de cacao.</p>
+              <div class="precio">S/ 12.00 <span>por porción</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Mousse de Chocolate', 'S/ 12.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: PANADERÍA -->
+    <section id="panaderia">
+      <h2>Panadería</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Croissant Relleno"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Croissant Relleno de Almendras</h3>
+              <p>Hojaldre crocante relleno de crema de almendras, horneado al momento.</p>
+              <div class="precio">S/ 8.50 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Croissant Relleno de Almendras', 'S/ 8.50 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKffVS0b0_oXsPVlAhHxBbbFoiVoOa9iLWNzwctiuUMQ&s=10" alt="Cinnamon Roll"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Cinnamon Roll</h3>
+              <p>Enrollado de canela esponjoso, cubierto con glaseado de queso crema.</p>
+              <div class="precio">S/ 9.00 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Cinnamon Roll', 'S/ 9.00 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Alfajores"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Alfajores Rellenos de Manjar</h3>
+              <p>Galletas suaves rellenas de manjar blanco, bañadas en coco rallado.</p>
+              <div class="precio">S/ 3.50 <span>por unidad</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Alfajores Rellenos de Manjar', 'S/ 3.50 c/u')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?auto=format&fit=crop&w=800&q=80" alt="Pie de Manzana"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Pie de Manzana</h3>
+              <p>Masa quebrada rellena de manzanas caramelizadas con canela.</p>
+              <div class="precio">S/ 13.00 <span>por porción</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Pie de Manzana', 'S/ 13.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: COMBOS -->
+    <section id="combos">
+      <h2>Combos</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=800&q=80" alt="Combo Cumpleaños"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Combo Cumpleaños Feliz</h3>
+              <p>Torta mediana + 6 cupcakes decorados + vela de número. Ideal para celebrar en casa.</p>
+              <div class="precio">S/ 95.00 <span>combo completo</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Combo Cumpleaños Feliz', 'S/ 95.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=800&q=80" alt="Combo San Valentín"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Combo San Valentín</h3>
+              <p>Torta corazón de fresa + 2 copas de mousse de chocolate + tarjeta dedicatoria.</p>
+              <div class="precio">S/ 85.00 <span>combo completo</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Combo San Valentín', 'S/ 85.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmbZZ3YoqqJl_M7xXxuBEeFHAK7Ehutm1VsmlG4WPpWA&s=10" alt="Combo Café y Postre"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Combo Café + Postre</h3>
+              <p>Un café artesanal a elección junto a una porción de tu postre favorito.</p>
+              <div class="precio">S/ 18.00 <span>combo completo</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Combo Café + Postre', 'S/ 18.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-carousel">
+            <div class="card-carousel-inner">
+              <div class="card-carousel-item"><img loading="lazy" src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80" alt="Combo Fiesta"></div>
+            </div>
+            <div class="card-carousel-dots"><span class="card-carousel-dot active"></span></div>
+          </div>
+          <div class="info">
+            <div class="card-info-item active">
+              <h3>Combo Fiesta Grande</h3>
+              <p>Torta grande (24 porciones) + 12 cupcakes surtidos. Perfecto para eventos y reuniones.</p>
+              <div class="precio">S/ 150.00 <span>combo completo</span></div>
+              <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(event, 'Combo Fiesta Grande', 'S/ 150.00')">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Consultar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  <section id="precios-internacionales" class="puente-digital-section">
+    <h2>Precios Referenciales Internacionales</h2>
+    <p class="pd-subtitle">
+      Nuestros precios se manejan en Soles (PEN). Si tu empresa opera en el extranjero,
+      consulta aquí una referencia automática en Dólares y Euros, actualizada con el tipo
+      de cambio del día, antes de coordinar tu pedido por WhatsApp.
+    </p>
+
+    <button class="pd-btn" onclick="iniciarPuenteDigital(productos)">
+      Consultar tipo de cambio y ver precios referenciales
+    </button>
+
+    <p id="pd-estado" class="pd-estado"></p>
+    <div id="pd-catalogo" class="pd-catalogo"></div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>🧁 Dulce Encanto Pastelería - Endulzando cada momento especial 🦋</p>
+    <p>Todos los derechos reservados © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Código de la Sesión 2: modelado de datos + conexión a API externa -->
+  <script src="productos-data.js"></script>
+  <script src="puente-digital.js"></script>
+</body>
+</html>
