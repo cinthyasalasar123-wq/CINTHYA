@@ -1,0 +1,49 @@
+/* ============================================================
+   Estilos del panel de administración (acceso + panel)
+   ============================================================ */
+* { box-sizing: border-box; }
+body { font-family: 'Work Sans', Arial, sans-serif; background: #fdedf3; margin: 0; color: #6d2350; }
+
+/* ---------- Pantalla de acceso ---------- */
+body.pagina-login { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.caja { background: #fff; padding: 36px 32px; border-radius: 18px; box-shadow: 0 12px 34px rgba(109,35,80,0.18); width: 100%; max-width: 340px; }
+.caja h1 { font-size: 1.3rem; margin: 0 0 18px; text-align: center; }
+.caja label { font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 4px; }
+.caja input { width: 100%; padding: 10px 12px; margin-bottom: 16px; border: 1px solid #e8b9d0; border-radius: 10px; font-size: 0.9rem; }
+.caja button { width: 100%; padding: 11px; border: none; border-radius: 10px; background: linear-gradient(135deg, #e0417e, #ad2f64); color: #fff; font-weight: 700; cursor: pointer; font-size: 0.95rem; }
+.caja a { display: block; text-align: center; margin-top: 14px; font-size: 0.8rem; color: #9c6b7c; }
+.error { background: #ffe1e1; color: #a8285a; padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; margin-bottom: 14px; }
+
+/* ---------- Panel ---------- */
+header { background: linear-gradient(135deg, #6d2350, #e0417e); color: #fff; padding: 18px 28px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+header h1 { margin: 0; font-size: 1.2rem; }
+.acciones-header { display: flex; gap: 8px; }
+.acciones-header a { color: #fff; text-decoration: none; background: rgba(255,255,255,0.2); padding: 8px 14px; border-radius: 10px; font-size: 0.85rem; }
+main { padding: 26px; max-width: 1150px; margin: 0 auto; }
+h2 { font-size: 1.05rem; margin: 30px 0 12px; }
+
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
+.tarjeta { background: #fff; border-radius: 14px; padding: 16px 18px; box-shadow: 0 6px 18px rgba(109,35,80,0.1); }
+.tarjeta .valor { font-size: 1.5rem; font-weight: 700; color: #e0417e; }
+.tarjeta .etiqueta { font-size: 0.78rem; color: #9c6b7c; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 18px rgba(109,35,80,0.08); }
+th, td { padding: 10px 12px; text-align: left; font-size: 0.82rem; border-bottom: 1px solid #f6dbe7; vertical-align: top; }
+th { background: #fdedf3; }
+
+select { padding: 5px 8px; border-radius: 8px; border: 1px solid #e8b9d0; font-size: 0.78rem; }
+button.guardar { border: none; background: #e0417e; color: #fff; padding: 5px 10px; border-radius: 8px; font-size: 0.75rem; cursor: pointer; }
+.form-fila { display: flex; gap: 6px; }
+.form-fila + .form-fila { margin-top: 6px; }
+
+/* Etiquetas de estado (pedido y pago) */
+.etiqueta-estado { display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+.pendiente { background: #ffe9b3; color: #8a6100; }
+.confirmado { background: #cfe8ff; color: #1a5a99; }
+.entregado, .pago-pagado { background: #d4f5d4; color: #1e7e1e; }
+.cancelado { background: #ffd6d6; color: #a8285a; }
+.pago-pendiente { background: #ffe9b3; color: #8a6100; }
+
+.activo-si { color: #1e7e1e; font-weight: 600; }
+.activo-no { color: #a8285a; font-weight: 600; }
+.nota { font-size: 0.78rem; color: #9c6b7c; }
